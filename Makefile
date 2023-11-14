@@ -1,5 +1,5 @@
 IMAGE_NAME := nazarsky/unrar
-IMAGE_VERSION := 1.0.1
+IMAGE_VERSION := 6.24.0
 DOCKERFILE := Dockerfile
 PLATFORMS := linux/amd64,linux/arm64
 
