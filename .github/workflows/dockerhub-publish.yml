@@ -9,16 +9,13 @@ on:
   schedule:
     - cron: '44 11 * * *'
   push:
-    branches: [ "main" ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
+    tags: [ '\d+.\d+.*' ]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: nazarsky/unrar
 
 jobs:
   build:
