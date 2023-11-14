@@ -10,7 +10,7 @@ on:
     - cron: '44 11 * * *'
   push:
     # Publish semver tags as releases.
-    tags: [ '\d.\d.*' ]
+    tags: [ '\d+.\d+.*' ]
 
 env:
   # Use docker.io for Docker Hub if empty
