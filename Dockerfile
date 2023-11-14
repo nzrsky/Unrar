@@ -1,5 +1,9 @@
 FROM debian:stable-slim
 
+LABEL maintainer="Alex Nazarov <nazarov@ptr.vc>"
+LABEL description="Docker Container for Unrar unarchiver"
+LABEL org.opencontainers.image.description "Docker Container for Unrar unarchiver"
+
 # Install required packages
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
