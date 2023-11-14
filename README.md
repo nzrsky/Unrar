@@ -2,7 +2,7 @@
 🐳 Docker image for Unrar
 
 [![Snyk Container](https://github.com/nzrsky/Unrar/actions/workflows/snyk-container.yml/badge.svg)](https://github.com/nzrsky/Unrar/actions/workflows/snyk-container.yml)
-[![Docker](https://github.com/nzrsky/Unrar/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/nzrsky/Unrar/actions/workflows/docker-publish.yml)
+[![Docker](https://github.com/nzrsky/Unrar/actions/workflows/dockerhub-publish.yml/badge.svg)](https://github.com/nzrsky/Unrar/actions/workflows/docker-publish.yml)
 [![v6.24](https://img.shields.io/badge/v6.24-blue?logoColor=white)]()
 
 > docker run -it --rm nazarsky/unrar:1.0.1 unrar -v
