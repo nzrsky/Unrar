@@ -5,6 +5,8 @@
 [![Docker](https://github.com/nzrsky/Unrar/actions/workflows/dockerhub-publish.yml/badge.svg)](https://github.com/nzrsky/Unrar/actions/workflows/dockerhub-publish.yml)
 [![v6.24](https://img.shields.io/badge/v6.24-blue?logoColor=white)]()
 
+Unrar source code repo: https://github.com/pmachapman/unrar
+
 > docker run -it --rm nazarsky/unrar:1.0.1 unrar -v
 
     UNRAR 6.24 beta 1 freeware      Copyright (c) 1993-2023 Alexander Roshal
