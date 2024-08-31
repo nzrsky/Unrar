@@ -2,7 +2,6 @@ FROM debian:stable-slim
 
 LABEL maintainer="Alex Nazarov <nazarov@ptr.vc>"
 LABEL description="Docker Container for Unrar unarchiver"
-LABEL org.opencontainers.image.description "Docker Container for Unrar unarchiver"
 
 WORKDIR /build
 
@@ -13,19 +12,18 @@ RUN apt-get update && \
     make=4.3-4.1 \
     clang=1:14.0-55.7~deb12u1 \
     ca-certificates && \
-    # Clone and build unrar
-    git clone https://github.com/pmachapman/unrar /build && \
+    rm -rf /var/lib/apt/lists/*
+
+# Clone and build unrar
+RUN git clone --depth 1 https://github.com/pmachapman/unrar /build && \
     cd /build && \
     make unrar && \
     make install && \
-    # Clean up
     cd / && \
-    rm -rf /build && \
     apt-get purge -y --auto-remove \
     git \
     make \
-    clang \
-    ca-certificates && \
-    rm -rf /var/lib/apt/lists/*
+    clang && \
+    rm -rf /build /var/lib/apt/lists/*
 
 CMD ["/usr/bin/unrar"]
